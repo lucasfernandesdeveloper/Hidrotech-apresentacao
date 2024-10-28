@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="pt-BR">
 
 <head>
@@ -7,68 +6,22 @@
     <title>Hidrotech</title>
     <link rel="stylesheet" href="../output.css">
 </head>
-    <style>
-        /* Estilos básicos para o menu */
-        .mobile-menu {
-            display: none;
-        }
-        /* Exibe o menu em telas maiores */
-        @media (min-width: 768px) {
-            .desktop-menu {
-                display: flex;
-            }
-            .mobile-menu {
-                display: none;
-            }
-        }
-    </style>
+
 <body class="px-8 md:px-20 w-full max-w-8xl mx-auto h-max bg-gray-100">
     <!-- Cabeçalho -->
-            <!-- Cabeçalho -->
     <header class="py-4">
         <nav class="container mx-auto w-full flex justify-between items-center">
             <a href="#" class="text-letra-azul font-bold text-2xl">Hidrotech</a>
-
-            <!-- Ícone do menu hambúrguer (visível apenas no mobile) -->
-            <button id="menu-toggle" class="block md:hidden text-letra-verde text-2xl">
-                ☰
-            </button>
-
-            <!-- Menu desktop -->
-            <ul class="desktop-menu flex items-center">
+            <ul class="flex items-center">
                 <li class="mr-6"><a href="#" class="text-letra-verde hover:text-letra-azul">Inicio</a></li>
                 <li class="mr-6"><a href="#" class="text-letra-verde hover:text-letra-azul">Soluções</a></li>
                 <li class="mr-6"><a href="#" class="text-letra-verde hover:text-letra-azul">Sobre Nós</a></li>
                 <li><a href="#secao_contato" class="text-letra-verde hover:text-letra-azul">Contato</a></li>
             </ul>
-
-            <!-- Menu mobile (oculto inicialmente) -->
-            <ul id="mobile-menu" class="mobile-menu absolute bg-gray-100 w-full left-0 top-16 shadow-lg z-10 flex flex-col items-center">
-                <li class="py-2"><a href="#" class="text-letra-verde hover:text-letra-azul" onclick="closeMenu()">Inicio</a></li>
-                <li class="py-2"><a href="#" class="text-letra-verde hover:text-letra-azul" onclick="closeMenu()">Soluções</a></li>
-                <li class="py-2"><a href="#" class="text-letra-verde hover:text-letra-azul" onclick="closeMenu()">Sobre Nós</a></li>
-                <li class="py-2"><a href="#secao_contato" class="text-letra-verde hover:text-letra-azul" onclick="closeMenu()">Contato</a></li>
-            </ul>
         </nav>
     </header>
 
-    <!-- Conteúdo restante... -->
-
-    <!-- JavaScript para abrir/fechar o menu -->
-    <script>
-        const menuToggle = document.getElementById('menu-toggle');
-        const mobileMenu = document.getElementById('mobile-menu');
-
-        menuToggle.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-
-        function closeMenu() {
-            mobileMenu.classList.add('hidden');
-        }
-    </script>
-
-    <div class="absolute top-12 right-0 md:right-0 z-0 w-50 md:w-80">
+    <div class="absolute top-12 right-2 md:right-0 z-0 w-50 md:w-80">
         <img src="src/img/pipe.svg" alt="" class="">
     </div>
 
