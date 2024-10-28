@@ -26,11 +26,11 @@
         <nav class="container mx-auto w-full flex justify-between items-center">
             <a href="#" class="text-letra-azul font-bold text-2xl">Hidrotech</a>
             <!-- Ícone do menu hamburger -->
-            <button id="menu-toggle" class="text-letra-azul md:hidden">
+            <button id="menu-toggle" class="text-letra-azul md:none">
                 ☰
             </button>
             <!-- Menu de navegação -->
-            <ul id="nav-menu" class="hidden md:flex items-center">
+            <ul id="nav-menu" class="none md:flex items-center">
                 <li class="mr-6"><a href="#" class="text-letra-verde hover:text-letra-azul">Inicio</a></li>
                 <li class="mr-6"><a href="#" class="text-letra-verde hover:text-letra-azul">Soluções</a></li>
                 <li class="mr-6"><a href="#" class="text-letra-verde hover:text-letra-azul">Sobre Nós</a></li>
@@ -45,7 +45,7 @@
             const navMenu = document.getElementById("nav-menu");
 
             menuToggle.addEventListener("click", () => {
-                navMenu.classList.toggle("hidden");
+                navMenu.classList.toggle("none");
             });
         });
     </script>
