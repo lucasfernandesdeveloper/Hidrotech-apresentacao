@@ -7,7 +7,27 @@
     <title>Hidrotech</title>
     <link rel="stylesheet" href="../output.css">
 </head>
+<style>
+        /* Estilos adicionais para o menu responsivo */
+        #menu {
+            display: none;
+        }
 
+        /* Mostra o ícone do menu hambúrguer em telas menores */
+        .menu-hamburguer {
+            display: block;
+        }
+
+        @media (min-width: 768px) {
+            #menu {
+                display: flex;
+            }
+
+            .menu-hamburguer {
+                display: none;
+            }
+        }
+    </style>
 <body class="px-8 md:px-20 w-full max-w-8xl mx-auto h-max bg-gray-100">
     <!-- Cabeçalho -->
         <header class="py-4">
