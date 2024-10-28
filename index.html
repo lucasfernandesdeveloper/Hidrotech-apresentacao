@@ -10,17 +10,41 @@
 
 <body class="px-8 md:px-20 w-full max-w-8xl mx-auto h-max bg-gray-100">
     <!-- Cabeçalho -->
-    <header class="py-4">
-        <nav class="container mx-auto w-full flex justify-between items-center">
-            <a href="#" class="text-letra-azul font-bold text-2xl">Hidrotech</a>
-            <ul class="flex items-center">
-                <li class="mr-6"><a href="#" class="text-letra-verde hover:text-letra-azul">Inicio</a></li>
-                <li class="mr-6"><a href="#" class="text-letra-verde hover:text-letra-azul">Soluções</a></li>
-                <li class="mr-6"><a href="#" class="text-letra-verde hover:text-letra-azul">Sobre Nós</a></li>
-                <li><a href="#secao_contato" class="text-letra-verde hover:text-letra-azul">Contato</a></li>
-            </ul>
-        </nav>
-    </header>
+<header class="py-4">
+    <nav class="container mx-auto w-full flex justify-between items-center">
+        <a href="#" class="text-letra-azul font-bold text-2xl">Hidrotech</a>
+        <div class="block lg:hidden">
+            <button id="menu-toggle" class="focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+        </div>
+        <ul id="menu" class="hidden lg:flex items-center">
+            <li class="mr-6"><a href="#" class="text-letra-verde hover:text-letra-azul">Inicio</a></li>
+            <li class="mr-6"><a href="#" class="text-letra-verde hover:text-letra-azul">Soluções</a></li>
+            <li class="mr-6"><a href="#" class="text-letra-verde hover:text-letra-azul">Sobre Nós</a></li>
+            <li><a href="#secao_contato" class="text-letra-verde hover:text-letra-azul">Contato</a></li>
+        </ul>
+    </nav>
+    <div id="mobile-menu" class="lg:hidden">
+        <ul class="flex flex-col items-start mt-2 hidden">
+            <li class="mb-2"><a href="#" class="text-letra-verde hover:text-letra-azul">Inicio</a></li>
+            <li class="mb-2"><a href="#" class="text-letra-verde hover:text-letra-azul">Soluções</a></li>
+            <li class="mb-2"><a href="#" class="text-letra-verde hover:text-letra-azul">Sobre Nós</a></li>
+            <li><a href="#secao_contato" class="text-letra-verde hover:text-letra-azul">Contato</a></li>
+        </ul>
+    </div>
+</header>
+
+<script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu').querySelector('ul');
+
+    menuToggle.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+    });
+</script>
 
     <div class="absolute top-12 right-2 md:right-0 z-0 w-50 md:w-80">
         <img src="src/img/pipe.svg" alt="" class="">
