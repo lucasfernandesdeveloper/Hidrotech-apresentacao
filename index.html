@@ -10,14 +10,104 @@
 
 <body class="px-8 md:px-20 w-full max-w-8xl mx-auto h-max bg-gray-100">
     <!-- Cabeçalho -->
-    <header class="py-4">
-        <nav class="container mx-auto w-full flex justify-between items-center">
-            <a href="#" class="text-letra-azul font-bold text-2xl">HydroSense</a>
-            <ul class="flex items-center">
-                <li class="mr-6"><a href="#" class="text-letra-verde hover:text-letra-azul">Inicio</a></li>
-                <li class="mr-6"><a href="paginas/hydrosense.html" class="text-letra-verde hover:text-letra-azul">Saiba Mais</a></li>
-                <li><a href="paginas/feedback.html" class="text-letra-verde hover:text-letra-azul">Feedback</a></li>
-                <li class="mr-6"><a href="https://forms.gle/fZs7xzSrtqcKWpYo6" class="text-letra-verde hover:text-letra-azul">Contato</a></li>
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HydroSense</title>
+    <link rel="stylesheet" href="../output.css">
+</head>
+
+        <style>
+
+  /* Cabeçalho */
+        header {
+            padding: 1rem 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        /* Estilo da logo */
+        .logo {
+            font-weight: bold;
+            font-size: 1.5rem;
+            color: #005f73; /* Azul */
+            text-decoration: none;
+        }
+
+        /* Estilo do botão de menu */
+        #menu-toggle {
+            font-size: 1.5rem;
+            color: #005f73;
+            display: none;
+            cursor: pointer;
+            background: none;
+            border: none;
+            margin-left: 1rem;
+        }
+
+        /* Menu de navegação */
+        #nav-menu {
+            display: flex;
+            gap: 1rem;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            align-items: center;
+        }
+
+        #nav-menu a {
+            color: #009688; /* Verde */
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        #nav-menu a:hover {
+            color: #005f73; /* Azul ao passar o mouse */
+        }
+
+        /* Estilo para dispositivos móveis */
+        @media (max-width: 768px) {
+            #menu-toggle {
+                display: block;
+            }
+
+            #nav-menu {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                width: 100%;
+                right: 0rem;
+                top: 60px;
+                background-color: #fff;
+                padding: 1rem;
+                box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+                border-radius: 8px;
+                z-index: 10;
+            }
+
+            #nav-menu.active {
+                display: flex;
+            }
+        }
+    </style>
+    
+<body class="px-8 md:px-20 w-full max-w-8xl mx-auto h-max bg-gray-100">
+    
+    <header>
+        <!-- Logo à esquerda -->
+        <a href="#" class="logo">HydroSense</a>
+        <!-- Botão de menu hamburger e links de navegação à direita -->
+        <div style="display: flex; align-items: center;">
+            <!-- Menu de navegação -->
+            <ul id="nav-menu">
+              <li class="mr-6"><a href="#" class="text-letra-verde hover:text-letra-azul">Inicio</a></li>
+              <li class="mr-6"><a href="paginas/hydrosense.html" class="text-letra-verde hover:text-letra-azul">Saiba Mais</a></li>
+              <li><a href="paginas/feedback.html" class="text-letra-verde hover:text-letra-azul">Feedback</a></li>
+              <li class="mr-6"><a href="https://forms.gle/fZs7xzSrtqcKWpYo6" class="text-letra-verde hover:text-letra-azul">Contato</a></li>
             </ul>
             <!-- Ícone do menu hamburger para dispositivos móveis -->
             <button id="menu-toggle">☰</button>
@@ -68,9 +158,15 @@
                         </h6>
                     </div>
                     <div
+<<<<<<< HEAD
                         class="p-1 mt-5 border-t border-slate-100 text-justify max-h-60 overflow-y-auto [&::-webkit-scrollbar-thumb]:rounded-xl [&::-webkit-scrollbar-thumb]:bg-slate-300 [&::-webkit-scrollbar]:w-1.5 [&::-webkit-scrollbar-track]:rounded-xl [&::-webkit-scrollbar-track]:bg-slate-100">
                         <p class="block text-slate-600 leading-normal font-light mb-4 max-w-lg">
                             O HydroSense oferece um monitoramento em tempo real, com sensores de fluxo que capturam dados instantâneos sobre o consumo de água em diferentes pontos do sistema hidráulico de residências e condomínios. Esses dados são transmitidos automaticamente para uma central de controle, onde os usuários podem acompanhar detalhadamente o consumo diário, semanal e mensal através de uma plataforma online. O sistema também auxilia a identificar situações de uso excessivo, vazamentos ou hábitos de desperdício, como o uso prolongado de torneiras. Em caso de anomalias, o HydroSense emite alertas automáticos para que os usuários possam tomar ações corretivas de imediato, evitando desperdícios e contribuindo para uma gestão eficiente do recurso.
+=======
+                        class="p-3 mt-5 border-t border-slate-100 text-center max-h-60 overflow-y-auto [&::-webkit-scrollbar-thumb]:rounded-xl [&::-webkit-scrollbar-thumb]:bg-slate-300 [&::-webkit-scrollbar]:w-1.5 [&::-webkit-scrollbar-track]:rounded-xl [&::-webkit-scrollbar-track]:bg-slate-100">
+                        <p class="block text-slate-600 leading-normal font-light mb-4 max-w-lg text-justify">
+                            O HydroSense oferece um monitoramento em tempo real, com sensores de fluxo que capturam dados instantâneos sobre o consumo de água em diferentes pontos do sistema hidráulico de residências e condomínios. Esses dados são transmitidos automaticamente para uma central de controle, onde os usuários podem acompanhar detalhadamente o consumo diário, semanal e mensal através de uma plataforma online. O sistema também auxilia a identificar situações de uso excessivo, vazamentos ou hábitos de desperdício, como o uso prolongado de torneiras. Em caso de anomalias, o HydroSense emite alertas automáticos para que os usuários possam tomar ações corretivas de imediato, evitando desperdícios e contribuindo para uma gestão eficiente do recurso.
+>>>>>>> e8ba9489101284603638bc160c86bb0aca06d7c7
                         </p>
                     </div>
                 </div>
@@ -88,9 +184,15 @@
                         </h6>
                     </div>
                     <div
+<<<<<<< HEAD
                         class="p-1 mt-5 border-t border-slate-100 max-h-60 overflow-y-auto [&::-webkit-scrollbar-thumb]:rounded-xl [&::-webkit-scrollbar-thumb]:bg-slate-300 [&::-webkit-scrollbar]:w-1.5 [&::-webkit-scrollbar-track]:rounded-xl [&::-webkit-scrollbar-track]:bg-slate-100 text-justify">
                         <p class="block text-slate-600 leading-normal font-light mb-4 max-w-lg">
                             A gestão inteligente do HydroSense vai além do monitoramento básico, oferecendo uma análise detalhada dos padrões de uso da água em cada ambiente monitorado. Com os padrões de comportamento dos usuários, podem ser tomadas práticas mais sustentáveis, como a redução do tempo de banho e o controle no uso de torneiras. Além disso, o sistema permite a criação de alertas personalizados que ajudam os usuários a ajustar o consumo de acordo com suas necessidades diárias, promovendo o uso consciente da água e incentivando uma mudança gradual de hábitos para uma vida mais sustentável​
+=======
+                        class="p-3 mt-5 border-t border-slate-100 text-center max-h-60 overflow-y-auto [&::-webkit-scrollbar-thumb]:rounded-xl [&::-webkit-scrollbar-thumb]:bg-slate-300 [&::-webkit-scrollbar]:w-1.5 [&::-webkit-scrollbar-track]:rounded-xl [&::-webkit-scrollbar-track]:bg-slate-100">
+                        <p class="block text-slate-600 leading-normal font-light mb-4 max-w-lg text-justify">
+                            A gestão inteligente do HydroSense vai além do monitoramento básico, oferecendo uma análise detalhada dos padrões de uso da água em cada ambiente monitorado. Com os padrões de comportamento dos usuários, podem ser tomadas práticas mais sustentáveis, como a redução do tempo de banho e o controle no uso de torneiras. Além disso, o sistema permite a criação de alertas personalizados que ajudam os usuários a ajustar o consumo de acordo com suas necessidades diárias, promovendo o uso consciente da água e incentivando uma mudança gradual de hábitos para uma vida mais sustentável​
+>>>>>>> e8ba9489101284603638bc160c86bb0aca06d7c7
                         </p>
                     </div>
                 </div>
@@ -107,9 +209,15 @@
                         </h6>
                     </div>
                     <div
+<<<<<<< HEAD
                         class="p-3 mt-5 border-t border-slate-100 text-justify max-h-60 overflow-y-auto [&::-webkit-scrollbar-thumb]:rounded-xl [&::-webkit-scrollbar-thumb]:bg-slate-300 [&::-webkit-scrollbar]:w-1.5 [&::-webkit-scrollbar-track]:rounded-xl [&::-webkit-scrollbar-track]:bg-slate-100">
                         <p class="block text-slate-600 leading-normal font-light mb-4 max-w-lg">
                             A economia e a sustentabilidade estão no coração do HydroSense, que foi projetado para proporcionar uma redução de até 30% no consumo de água em residências e condomínios ao longo de um ano. Ao reduzir o desperdício e otimizar o uso de água, o sistema não apenas ajuda os usuários a economizar em suas contas mensais, mas também apoia a preservação de recursos hídricos essenciais. A solução está alinhada com regulamentações ambientais e contribui para os Objetivos de Desenvolvimento Sustentável (ODS) da ONU, incentivando práticas diárias que beneficiam tanto os usuários quanto o meio ambiente​
+=======
+                        class="p-3 mt-5 border-t border-slate-100 text-center max-h-60 overflow-y-auto [&::-webkit-scrollbar-thumb]:rounded-xl [&::-webkit-scrollbar-thumb]:bg-slate-300 [&::-webkit-scrollbar]:w-1.5 [&::-webkit-scrollbar-track]:rounded-xl [&::-webkit-scrollbar-track]:bg-slate-100">
+                        <p class="block text-slate-600 leading-normal font-light mb-4 max-w-lg text-justify">
+                            A economia e a sustentabilidade estão no coração do HydroSense, que foi projetado para proporcionar uma redução de até 30% no consumo de água em residências e condomínios ao longo de um ano. Ao reduzir o desperdício e otimizar o uso de água, o sistema não apenas ajuda os usuários a economizar em suas contas mensais, mas também apoia a preservação de recursos hídricos essenciais. A solução está alinhada com regulamentações ambientais e contribui para os Objetivos de Desenvolvimento Sustentável (ODS) da ONU, incentivando práticas diárias que beneficiam tanto os usuários quanto o meio ambiente​
+>>>>>>> e8ba9489101284603638bc160c86bb0aca06d7c7
                         </p> 
                     </div>
                 </div>
@@ -119,10 +227,17 @@
 
 
     <!-- Seção Contato -->
+<<<<<<< HEAD
     <section class="bg-white py-20 flex justify-between ">
         <div class="container md:w-1/2 p-4">
             <h2 class="text-letra-azul font-bold text-3xl mb-8 ">Auxilie com um Feedback</h2>
             <p> Acesse o link e responda algumas perguntas para nos ajudar no caminho da sustentabilidade.</p>
+=======
+    <section class="bg-gray-100 py-20">
+        <div class="container md:w-1/2">
+            <h2 class="text-letra-azul font-bold text-3xl mb-8 ">Entre em Contato</h2>
+            <p> Gostaria de saber mais sobre como implementar a tecnologia HydroSense? Entre em contato conosco para mais informações ou para agendar uma demonstração personalizada.</p>
+>>>>>>> e8ba9489101284603638bc160c86bb0aca06d7c7
             <div class="flex flex-wrap -mx-4">
                 <div class="w-full md:w-1/2 xl:w-1/2 p-4">
                     <button
