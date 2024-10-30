@@ -19,10 +19,24 @@
                 <li><a href="paginas/feedback.html" class="text-letra-verde hover:text-letra-azul">Feedback</a></li>
                 <li class="mr-6"><a href="https://forms.gle/fZs7xzSrtqcKWpYo6" class="text-letra-verde hover:text-letra-azul">Contato</a></li>
             </ul>
-        </nav>
+            <!-- Ícone do menu hamburger para dispositivos móveis -->
+            <button id="menu-toggle">☰</button>
+        </div>
     </header>
 
-    <div class="absolute top-12 right-0 z-0 w-50 md:w-80">
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const menuToggle = document.getElementById("menu-toggle");
+            const navMenu = document.getElementById("nav-menu");
+
+            menuToggle.addEventListener("click", () => {
+                navMenu.classList.toggle("active");
+            });
+        });
+    </script>
+
+
+    <div class="absolute top-12 right-0 md:right-0 z-0 w-40 md:w-80">
         <img src="src/img/pipe.svg" alt="" class="">
     </div>
 
@@ -36,7 +50,7 @@
         </div>
     </section>
 
-    <section class="bg-white py-20 w-full">
+    <section class="bg-gray-100 py-20 w-full">
         <div class="container mx-auto w-full">
             <h2 class="text-letra-azul font-bold text-3xl mb-8">Principais benefícios da HydroSense</h2>
             <div class="flex flex-wrap gap-y-16 gap-6 mx-auto align-middle justify-between w-full">
