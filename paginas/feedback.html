@@ -8,19 +8,110 @@
     <link rel="stylesheet" href="../output.css">
 </head>
 
-<body class="px-8 md:px-20 w-full max-w-8xl mx-auto h-max bg-gray-100">
-    <!-- Cabeçalho -->
-    <header class="py-4">
-        <nav class="container mx-auto w-full flex justify-between items-center">
-            <a href="#" class="text-letra-azul font-bold text-2xl">HydroSense</a>
-            <ul class="flex items-center">
+<style>
+
+    /* Cabeçalho */
+          header {
+              padding: 1rem 0;
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+          }
+  
+          /* Estilo da logo */
+          .logo {
+              font-weight: bold;
+              font-size: 1.5rem;
+              color: #005f73; /* Azul */
+              text-decoration: none;
+          }
+  
+          /* Estilo do botão de menu */
+          #menu-toggle {
+              font-size: 1.5rem;
+              color: #005f73;
+              display: none;
+              cursor: pointer;
+              background: none;
+              border: none;
+              margin-left: 1rem;
+          }
+  
+          /* Menu de navegação */
+          #nav-menu {
+              display: flex;
+              gap: 1rem;
+              list-style: none;
+              padding: 0;
+              margin: 0;
+              align-items: center;
+          }
+  
+          #nav-menu a {
+              color: #009688; /* Verde */
+              text-decoration: none;
+              transition: color 0.3s;
+          }
+  
+          #nav-menu a:hover {
+              color: #005f73; /* Azul ao passar o mouse */
+          }
+  
+          /* Estilo para dispositivos móveis */
+          @media (max-width: 768px) {
+              #menu-toggle {
+                  display: block;
+              }
+  
+              #nav-menu {
+                  display: none;
+                  flex-direction: column;
+                  position: absolute;
+                  width: 100%;
+                  right: 0rem;
+                  top: 60px;
+                  background-color: #fff;
+                  padding: 1rem;
+                  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+                  border-radius: 8px;
+                  z-index: 10;
+              }
+  
+              #nav-menu.active {
+                  display: flex;
+              }
+          }
+      </style>
+      
+  <body class="px-8 md:px-20 w-full max-w-8xl mx-auto h-max bg-gray-100">
+      
+      <header>
+          <!-- Logo à esquerda -->
+          <a href="#" class="logo">HydroSense</a>
+          <!-- Botão de menu hamburger e links de navegação à direita -->
+          <div style="display: flex; align-items: center;">
+              <!-- Menu de navegação -->
+              <ul id="nav-menu">
                 <li class="mr-6"><a href="../index.html" class="text-letra-verde hover:text-letra-azul">Inicio</a></li>
                 <li class="mr-6"><a href="hydrosense.html" class="text-letra-verde hover:text-letra-azul">Saiba Mais</a></li>
                 <li><a href="#" class="text-letra-verde hover:text-letra-azul">Feedback</a></li>
                 <li class="mr-6"><a href="https://forms.gle/fZs7xzSrtqcKWpYo6" class="text-letra-verde hover:text-letra-azul">Contato</a></li>
-            </ul>
-        </nav>
-    </header>
+              </ul>
+              <!-- Ícone do menu hamburger para dispositivos móveis -->
+              <button id="menu-toggle">☰</button>
+          </div>
+      </header>
+
+      <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const menuToggle = document.getElementById("menu-toggle");
+            const navMenu = document.getElementById("nav-menu");
+
+            menuToggle.addEventListener("click", () => {
+                navMenu.classList.toggle("active");
+            });
+        });
+    </script>
     
 <div class="flex justify-center">
     <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSenX3yUwUXglXxfProObdCmUpkpzE1WeTrdDQ7_t7qaU5yXlQ/viewform?embedded=true" width="640" height="1935" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
